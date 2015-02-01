@@ -1,5 +1,38 @@
 [package]
 
 name = "shove"
-version = "0.0.1"
 authors = ["Mark Burnett <mark.m.burnett@gmail.com>"]
+version = "0.0.1"
+description = "An HTTP-based, push-oriented message broker"
+keywords = ["broker", "message", "queue", "web"]
+license = "MIT"
+readme = "README.md"
+
+[lib]
+name = "shove"
+doc = false
+path = "src/lib/lib.rs"
+
+[[bin]]
+name = "shove"
+bench = false
+doc = false
+path = "src/bin/main.rs"
+test = false
+
+[[test]]
+name = "tests"
+
+[[bench]]
+name = "benches"
+
+[dependencies]
+cookie = "*"
+docopt = "*"
+hyper = "*"
+iron = "*"
+log = "*"
+rustc-serialize = "*"
+rustless = "*"
+url = "*"
+valico = "*"
